@@ -29,3 +29,21 @@ footer{
     background-color: palevioletred;
 }
 
+#padlock-icon{
+    margin-right: 10px;
+}
+
+#padlock-icon:hover{
+    transform: rotate(-8deg);
+    cursor : pointer;
+}
+
+#navbar-title{
+    margin-top: 3px;
+}
+
+#mode-button{
+    display: flex;
+    justify-content: end;
+}
+

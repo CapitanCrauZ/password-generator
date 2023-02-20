@@ -9,6 +9,9 @@ import TextField from '@mui/material/TextField';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import LockIcon from '@mui/icons-material/Lock';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+
 
 export function Generator(){
   
@@ -52,8 +55,11 @@ export function Generator(){
             <header>
                 <AppBar position="static" id='nav-bar'>
                     <Toolbar>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Password Generator</Typography>
-                        <Button color="inherit"></Button>
+                        <LockIcon id="padlock-icon" />
+                        <Typography id="navbar-title" variant="h6" component="div" sx={{ flexGrow: 1 }}>Password Generator</Typography>
+                        <Button id='mode-button' color="inherit">
+                            <DarkModeIcon/>
+                        </Button>
                     </Toolbar>
                 </AppBar>
             </header>
