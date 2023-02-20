@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.buttons-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-bar{
+    background-color: palevioletred;
+}
+
