@@ -1,6 +1,6 @@
 # Password Generator | Basic password generator app (Aplicación básica de generador de contraseñas)
 
-<!-- <img src="https://github.com/CapitanCrauZ/PASSWORD-GENERATOR/blob/master/padlock.png" width="10%" height="10%"> -->
+<img src="https://github.com/CapitanCrauZ/PASSWORD-GENERATOR/blob/master/padlock.png" width="10%" height="10%">
 
 ### Index
 - [Introduction](#Introduction)
