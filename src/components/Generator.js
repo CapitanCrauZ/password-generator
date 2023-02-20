@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 
 export function Generator(){
   
-    const [password, setPassword] = useState('');
+    const [password, setPassword] = useState('');    
     
     const generatePassword = (length, includeSymbols, includeNumbers, includeUppercase, includeLowercase) => {
         let charset = '';
@@ -31,11 +31,20 @@ export function Generator(){
     };
 
     const handleCopyClick = () => {
-        navigator.clipboard.writeText(password);
-     };
+        navigator.clipboard.writeText(password);    
+        alert("Password copied correctly!");
+    };
+
+    const actualLength = () => document.getElementById("length-slider").textContent; 
     
     const handleRefreshClick = () => {
-        generatePassword(8, true, true, true, true);
+        
+        // let symbols = document.getElementById("symbols-checkbox").checked;
+        // let numbers = document.getElementById("numbers-checkbox").checked;
+        // let uppercases = document.getElementById("uppercases-checkbox").checked;
+        // let lowercases = document.getElementById("lowercases-checkbox").checked;
+
+        generatePassword(actualLength(), true, true, true, true);
     };
     
     return (
@@ -60,19 +69,19 @@ export function Generator(){
                     </div>
                     <br></br>
                     <div>
-                        <Slider defaultValue={12} aria-label="Default" valueLabelDisplay="auto" onChange={e => generatePassword(e.target.value, true, true, true, true)}/>
+                        <Slider id="length-slider" defaultValue={12} aria-label="Default" valueLabelDisplay="auto" onChange={e => generatePassword(e.target.value, true, true, true, true)}/>
                     </div>
                     <div>
-                        <FormControlLabel control={<Checkbox onChange={e => generatePassword(8, e.target.checked, true, true, true)}/> }  label="Symbols"/>
+                        <FormControlLabel id='symbols-checkbox' control={<Checkbox onChange={e => generatePassword(actualLength(), e.target.checked, true, true, true)}/> }  label="Symbols"/>
                     </div>
                     <div>
-                        <FormControlLabel control={<Checkbox onChange={e => generatePassword(8, true, e.target.checked, true, true)}/> }  label="Numbers"/>
+                        <FormControlLabel id='numbers-checkbox' control={<Checkbox onChange={e => generatePassword(actualLength(), true, e.target.checked, true, true)}/> }  label="Numbers"/>
                     </div>
                     <div>
-                        <FormControlLabel control={<Checkbox onChange={e => generatePassword(8, true, true, e.target.checked, true)}/> }  label="Uppercases"/>
+                        <FormControlLabel id='uppercases-checkbox' control={<Checkbox onChange={e => generatePassword(actualLength(), true, true, e.target.checked, true)}/> }  label="Uppercases"/>
                     </div>
                     <div>
-                        <FormControlLabel control={<Checkbox onChange={e => generatePassword(8, true, true, true, e.target.checked)}/> }  label="Lowercases"/>
+                        <FormControlLabel id='lowercases-checkbox' control={<Checkbox onChange={e => generatePassword(actualLength(), true, true, true, e.target.checked)}/> }  label="Lowercases"/>
                     </div>
                 </FormGroup>
             </main>
