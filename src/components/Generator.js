@@ -58,6 +58,7 @@ export function Generator(){
                         <Button variant="contained" color="primary" onClick={handleCopyClick}>copy</Button>
                         <Button variant="contained" color="success" onClick={handleRefreshClick}>refresh</Button>
                     </div>
+                    <br></br>
                     <div>
                         <Slider defaultValue={12} aria-label="Default" valueLabelDisplay="auto" onChange={e => generatePassword(e.target.value, true, true, true, true)}/>
                     </div>
@@ -76,6 +77,7 @@ export function Generator(){
                 </FormGroup>
             </main>
             <footer>
+               <p>@2022 Created by CaptainCrauZ</p> 
             </footer>
         </div>      
         );
